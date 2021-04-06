@@ -17,18 +17,32 @@ const useStyles = makeStyles({
   },
 });
 
-export default function MediaCard() {
+export default function MediaCard(props) {
+  console.log(props);
   const classes = useStyles();
-
+  const headdata=['Anmol','Girish'];
+  const data=['hello','hii'];
   return (
     <Card className={classes.root}>
       <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png"
-          title="Contemplative Reptile"
-        />
+        <CardMedia/>
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            {headdata[props.id]}
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            {data[props.id]}
+          </Typography>
+        </CardContent>
       </CardActionArea>
+      <CardActions>
+        <Button size="small" color="primary">
+          Share
+        </Button>
+        <Button size="small" color="primary">
+          Learn More
+        </Button>
+      </CardActions>
     </Card>
   );
 }

@@ -7,13 +7,8 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <div className="App">
     <div className="Appheader">
-      <App />
-      <App />
-      <App />
-      <App />
-      <App />
-      <App />
-      <App />
+      <App id={0} />
+      <App id={1} />
     </div>
   </div>,
   document.getElementById('root')
